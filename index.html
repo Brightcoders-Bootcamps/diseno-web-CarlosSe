@@ -11,9 +11,12 @@
 </head>
 <body>
 
-    <!-- <nav>
+    <nav>
+        <div style="display: grid; align-content: space-between; grid-template-columns: 1fr 1fr; padding: 10px;">
+            <a href="" style="justify-self: start;"><img src="/images/logo.svg" alt=""></a>
+            <svg style="justify-self: end;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="hsl(0, 0%, 75%);" width="30px" height="30px"><path d="M0 0h24v24H0z" fill="none"/><path d="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z"/></svg>
+        </div>
         <ul class="navbar">
-            <li><a href=""><img src="/images/logo.svg" alt=""></a></li>
             <li class="navbar-item">
                 <a href="#">Features</a>
             </li>
@@ -28,18 +31,17 @@
                 <a href="#">Login</a>
             </li>
             <li class="navbar-item">
-                <a class="btn-primary" href="#">Sign Up</a>
+                <button class="btn-primary-rounded" href="#">Sign Up</button>
             </li>
-            <li class="toggle">---</li>
         </ul>
-    </nav> -->
+    </nav>
     
     <div class="landing" style="overflow-x: hidden;">
         <img src="images/illustration-working.svg" class="img-inicio" style="width: 100%; height: auto; margin-left: 18%;" alt="">
         <div style="text-align: center; margin: 3em; margin-bottom: 30%;" class="text-inicio">
             <h1>More than just shorter links</h1>
             <p>Build yout brand's recognition and get detailed insights on how your links are performing.</p>
-            <button class="btn-primary-rounded" style="margin-top: 1.5em;">Get started</button>
+            <button class="btn-primary-rounded" style="margin-top: 1.5em; padding: 15px; width: 70%;">Get started</button>
         </div>
     </div>
 
@@ -53,6 +55,34 @@
         <div style="margin: 10%;">
             <h1>Advanced Statistics</h1>
             <p>Track how yout links are performing across the web with our advanced statistics dashboard.</p>
+        </div>
+
+        <div class="card-container">
+            <div class="vertical-line"></div>
+            <hr>
+            <div class="card">
+                <div class="circle">
+                    <img src="images/icon-brand-recognition.svg" alt="">
+                </div>
+                <h3>Brand Recognition</h3>
+                <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content.</p>
+            </div>
+
+            <div class="card">
+                <div class="circle">
+                    <img src="images/icon-detailed-records.svg" alt="">
+                </div>
+                <h3>Detailed Records</h3>
+                <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+            </div>
+
+            <div class="card">
+                <div class="circle">
+                    <img src="images/icon-fully-customizable.svg" alt="">
+                </div>
+                <h3>Fully Customizable</h3>
+                <p>Imrpove brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+            </div>
         </div>
 
     </div>

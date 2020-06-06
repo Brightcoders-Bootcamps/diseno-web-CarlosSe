@@ -60,6 +60,7 @@ body {
     font-weight: 500;
     text-align: center;
     font-size: 18px;
+    height:100%;
 }
 
 h1,
@@ -155,6 +156,88 @@ select {
     filter: brightness(100);
 }
 
+.shortener {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    background-color: #f0f1f6;
+}
+
+.testexpand {
+    grid-area: 1 / 2 / 2 / 2;
+}
+
+
+.navbar {
+    display: none;
+    grid-gap: 15px;
+    list-style: none;
+    background-color: $dark-violet;
+    margin: 0 2%;
+    padding: 15px;
+    border-radius: 10px;
+    
+    li a {
+        color: $white;
+        text-decoration: none;
+    }
+
+    hr {
+        height: 1px;
+        background-color: $grayish-violet;
+        border: none;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+.vertical-line {
+    border-left: 6px solid $cyan;
+    position: absolute;
+    left: calc(50% - 3px);
+    height: 80%;
+    z-index: 1;
+}
+
+.horizontal-line {
+    display: none;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    position: relative;
+    padding: 50px;
+    margin: 30px;  
+    background-color: #FFFFFF;
+    z-index: 2;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 100%;
+    position: relative;
+}
+
+hr {
+    display: none;
+}
+
+.circle {
+    background-color: $dark-violet; 
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: calc(50% - 40px);
+    top: -40px;    
+
+    img {
+        padding: 20px;
+    }
+}
+
 @media (min-width: 768px) {
     footer {
         display: grid;
@@ -212,5 +295,37 @@ select {
             color: #FFFFFF;
             margin-bottom: 15px;
         }
+    }
+    
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .circle {
+        background-color: $dark-violet; 
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+        position: absolute;
+        left: calc(20% - 40px);
+        top: -40px;
+    
+        img {
+            padding: auto;
+        }
+    }
+
+    .vertical-line {
+        display: none;
+    }
+    
+    hr {
+        display: block;
+        position: absolute;
+        border: 6px solid $cyan;
+        width: 80%;
+        left: 10%;
+        top: 50%;
     }
 }
