@@ -4,7 +4,7 @@
 
 **To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
 
-** GithubPages **
+**GithubPages**
 https://carlosse.github.io/
 
 ## The challenge
