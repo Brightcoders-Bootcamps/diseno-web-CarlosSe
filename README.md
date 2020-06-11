@@ -4,6 +4,9 @@
 
 **To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
 
+** GithubPages **
+https://carlosse.github.io/
+
 ## The challenge
 
 Your challenge is to build out this landing page, integrate with the [rel.ink](https://rel.ink) API and get it looking as close to the design as possible.
