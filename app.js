@@ -51,7 +51,9 @@ resultados.addEventListener('click', function (event) {
         tempInput.value = url;
         tempInput.select();
         document.execCommand('copy');
-        tempInput.type = "hidden"
+        tempInput.type = "hidden";
+        event.target.textContent = "Copied!"
+        event.target.classList.add("active");
     }
 })
 

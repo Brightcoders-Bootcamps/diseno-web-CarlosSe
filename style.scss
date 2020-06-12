@@ -8,6 +8,9 @@ $grayish-violet: hsl(257, 7%, 63%);
 $very-dark-blue: hsl(255, 11%, 22%);
 $very-dark-violet: hsl(260, 8%, 14%);
 
+$cyan-ligthen: lighten( $cyan, 15% );
+$dark-violet-ligthen: lighten( $dark-violet, 15% );
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -15,11 +18,11 @@ $very-dark-violet: hsl(260, 8%, 14%);
 }
 
 body {
+    height:100%;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    text-align: center;
     font-size: 18px;
-    height:100%;
+    text-align: center;
 }
 
 .boost-bg {
@@ -28,7 +31,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: $dark-violet;
-    padding: 10%;
+    padding: 17% 10%;
 
     h2 {
         color: #FFFFFF;
@@ -40,20 +43,28 @@ body {
     }
 }
 
-.btn-primary {
-    background-color: $cyan;
-    color: $white;
-    text-decoration: none;
-    border: none;
-    padding: 0.5em;
-    margin: 0.25em 0;
-    font-weight: 700;
-    font-size: 18px;
-    border-radius: 7px;
-    cursor: pointer;
+.btn-copy.active {
+    background-color: $dark-violet;
 
     &:hover {
-        opacity: 0.5;
+        background-color: $dark-violet-ligthen;
+    }
+}
+
+.btn-primary {
+    color: $white;
+    cursor: pointer;
+    background-color: $cyan;
+    border: none;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0.25em 0;
+    padding: 0.5em;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $cyan-ligthen;
     }
 }
 
@@ -66,16 +77,16 @@ body {
     display: grid;
     grid-template-columns: 100%;
     grid-area: 4 / 2 / 4 / 3;
+    margin-bottom: 30%;   
     position: relative;
     row-gap: 5em;
-    margin-bottom: 50%;   
 }
 
 .card {
-    position: relative;
-    padding: 15%;
     background-color: #FFFFFF;
     border-radius: 7px;
+    position: relative;
+    padding: 2em;
     z-index: 2;
 }
 
@@ -91,10 +102,10 @@ body {
     background-color: $dark-violet; 
     border-radius: 50%;
     height: 80px;
-    width: 80px;
-    position: absolute;
     left: calc(50% - 40px);
-    top: -40px;    
+    position: absolute;
+    top: -40px;  
+    width: 80px;  
 
     img {
         padding: 20px;
@@ -102,15 +113,15 @@ body {
 }
 
 .container-center {
+    background-color: #f0f1f6;
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
-    background-color: #f0f1f6;
 }
 
 footer {
+    background-color: $very-dark-violet;
     display: grid;
     grid-template-columns: 100%;
-    background-color: $very-dark-violet;
 
     h5 {
         color: $white;
@@ -125,9 +136,10 @@ footer {
         margin: 7px;
 
         a {
-            text-decoration: none;
             color: $grayish-violet;
             font-size: 16px;
+            text-decoration: none;
+
             &:hover {
                 color: $cyan;    
             }
@@ -149,8 +161,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
     color: $very-dark-violet;
+    font-weight: 700;
 }
 
 hr {
@@ -160,13 +172,12 @@ hr {
 .landing {
     display: grid;
     grid-template-columns: 100%;
-    padding: 0 20px;
     overflow: hidden;
+    padding: 0 20px;
 
     
     img {
         height: auto;
-        margin: 0 7%;
     }
 
     .landing-text {
@@ -179,23 +190,23 @@ hr {
 }
 
 .logo-footer {
-    margin: 10%;
     filter: brightness(100);
+    margin: 10%;
 }
 
 #menu {
+    cursor: pointer;
     display: flex;
     margin-left: auto;
-    cursor: pointer;
 }
 
 .msg-error {
     color: $red;
-    text-align: left;
+    display: none;
     font-size: 14px;
     font-style: italic;
     margin-bottom: 0.5em;
-    display: none;
+    text-align: left;
 
     &.active {
         display: block;
@@ -214,13 +225,13 @@ nav {
 }
 
 .navbar {
-    list-style: none;
-    display: none;
-    grid-area: 2 / 1 / 2 / 3;
     background-color: $dark-violet;
     border-radius: 10px;
-    padding: 15px;
+    display: none;
+    grid-area: 2 / 1 / 2 / 3;
+    list-style: none;
     margin: 0 3%;
+    padding: 15px;
 
     .navbar-item {
         margin: 10px 10px;
@@ -246,23 +257,27 @@ p {
 }
 
 .result {
+    align-items: center;
+    background-color: $white;
+    border-radius: 7px;
+    column-gap: 15px;
     display: grid;
     grid-template-columns: 1fr;
-    column-gap: 15px;
-    background-color: $white;
-    margin: 1em 0;
-    border-radius: 7px;
     justify-content: center;
-    align-items: center;
+    margin: 1em 0;
     text-align: left;
 }
 
 .result-header {
     border-bottom: 1px solid $gray;
+    overflow: hidden;
 
     p {
-        padding: 0.5em 1em;
         color: $dark-violet;
+        padding: 0.5em 1em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
@@ -334,7 +349,7 @@ p {
     z-index: 1;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 
     .boost-bg {
         background: url('images/bg-boost-desktop.svg');
@@ -348,16 +363,17 @@ p {
     .card {
         position: relative;
         text-align: left;
-        padding: 10%;
+        height: min-content;
+        padding: 2em;
         h3 {
-            margin: 15px 0;
+            margin: 30px 0 15px 0;
         }
     }
 
     .card-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        margin-bottom: 10%;
+        margin-bottom: 15%;
         column-gap: 5em;
     }
 
@@ -408,7 +424,7 @@ p {
 
     .landing {
         display: grid;
-        grid-template-columns: 8fr 4fr;
+        grid-template-columns: 7fr 5fr;
         padding: 0 20px;
         overflow: hidden;
         justify-items: center;
@@ -416,6 +432,7 @@ p {
     
         
         img {
+            width: 100%;
             height: auto;
             margin: 0 7%;
         }
